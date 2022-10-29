@@ -1,0 +1,14 @@
+    for i in range(100, -1, -10):
+        if len(str(i)) < 3:
+            bar_chart += (3 - len(str(i))) * " " + str(i) + "|"
+        else:
+            bar_chart += str(i) + "|"
+
+        for s in spendings:
+            for k in s:
+                x = int(s[k])
+                if x > i:
+                    bar_chart += " " + "\n"
+                else:
+                    bar_chart += " o" + "\n"
+                x -= 10
